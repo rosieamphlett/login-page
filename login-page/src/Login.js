@@ -14,7 +14,7 @@ class Login extends Component {
         return (
           <form>
             <div className="login-header">
-              <img src= {require('./Vector.png')} alt="key"/>
+              <img src= {require('./pics/Vector.png')} alt="key"/>
               <h2>Log In to The Coaching Manual</h2>
             </div>
 

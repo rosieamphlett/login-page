@@ -18,9 +18,9 @@ img[alt*="logo"] {
 }
 
 .content {
-  background: linear-gradient(0deg,rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25)),url('./Coaching\ Manual-3.png');
+  background: linear-gradient(0deg, rgba(44, 82, 140, 0.5), rgba(0, 0, 0, 0.25)),url('./pics/Coaching\ Manual-3.png');
   background-size: 100% 100%;
-  mask: url("Mask.png");
+  mask: url("./pics/Mask.png");
   display: flex;
   text-align: center;
   align-items: center;
@@ -38,7 +38,7 @@ form {
 .login-header {
   background: #45D695;
   height: 55px;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
   line-height: 55px;
   text-align: center;

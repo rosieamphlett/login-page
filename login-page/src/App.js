@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src= {require('./tcm-logo.png')} alt="logo"/>
+          <img src= {require('./pics/tcm-logo.png')} alt="logo"/>
         </header>
         <div className="content">
           <Login />

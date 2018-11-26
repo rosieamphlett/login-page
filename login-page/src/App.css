@@ -81,6 +81,11 @@ input[type=password], input[type=email]{
   padding-bottom: 25px;
 }
 
+.errors {
+  font-size: 12px;
+  padding-bottom: 5px;
+}
+
 .submit {
 	background-color: #45D695;
 	border-radius: 5px;

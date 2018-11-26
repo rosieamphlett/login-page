@@ -4,7 +4,10 @@ class Login extends Component {
     state = {
         email: '',
         password: '',
-        formValid: false
+        formValid: false,
+        emailValid: false,
+        passwordValid: false,
+        errors: {email: '', password: ''}
     }
 
     render () {
@@ -24,16 +27,64 @@ class Login extends Component {
               <div className='input password'>
                 <h3 className="subheadings">Password*</h3>
                 <input type="password" id="pwd" ref="pwd" name="password" placeholder=" ************" value={this.state.password} onChange={this.handleChange}/>
-                {/* <span onClick={this.togglePassword} className={this.state.passwordIsHidden ? "glyphicon glyphicon-eye-open" : "glyphicon glyphicon-eye-close"}></span> */}
               </div>
-    
+
+              <div className='errors'>
+                {Object.keys(this.state.errors).map((fieldName, i) => {
+                  if(this.state.errors[fieldName].length > 0){
+                    return (<p className="errors" key={i}>{this.state.errors[fieldName]}</p>)        
+                  } else {
+                    return '';
+                  }
+                })}
+              </div>
+
               <button type="submit" className="submit" disabled={!this.state.formValid}>Log In</button>
-            
-            <span className="forgot-pwd">Forgot Password?</span>
-            <span className="sign-up">No Account? <span className="clickon-signup"> Sign Up</span></span>
+          
+              <span className="forgot-pwd">Forgot password?</span>
+              <span className="sign-up">No account? <span className="clickon-signup"> Sign up</span></span>
             </div>
           </form>
         )
+      }
+
+      handleChange = (event) => {
+        let name = event.target.name;
+        let value = event.target.value;
+        this.setState({
+            [name]: value
+        }, () => { this.validateField(name, value) })
+      };
+    
+    
+      validateField(fieldName, value) {
+        let errors = this.state.errors;
+        let emailValid = this.state.emailValid;
+        let passwordValid = this.state.passwordValid;
+    
+          switch(fieldName) {
+          case 'email':
+            emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+            errors.email = emailValid ? '' : 'Please enter a valid email address';
+            break;
+          case 'password':
+            passwordValid = value.match(/^\w{8,}$/) ;
+            errors.password = passwordValid ? '':'Password must contain at least 8 characters';
+            break;
+            default:
+            break;
+          }
+
+          this.setState({
+            errors: errors,
+            emailValid: emailValid,
+            passwordValid: passwordValid
+        }, this.validateForm());
+      }
+    
+      validateForm() {
+        this.setState({
+            formValid: this.state.emailValid && this.state.passwordValid});
       }
 }
 

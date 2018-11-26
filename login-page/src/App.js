@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Login from './Login'
 import './App.css';
 
 class App extends Component {
@@ -9,7 +10,7 @@ class App extends Component {
           <img src= {require('./tcm-logo.png')} alt="logo"/>
         </header>
         <div className="content">
-          <p> login page here! </p>
+          <Login />
         </div>
       </div>
     );

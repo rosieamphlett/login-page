@@ -1,15 +1,6 @@
 * {
   margin: 0;
-  overflow: hidden
-}
-
-.App {
-  text-align: center;
-  /* filter: drop-shadow(1411px, 826px, rgba(44, 82, 140, 0.5)); */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
+  overflow: hidden;
 }
 
 .App-header {
@@ -21,15 +12,109 @@
   margin: 0px;
 }
 
-img {
+img[alt*="logo"] {
   float: left;
   padding: 10px;
 }
 
 .content {
-  background-image: url("./Coaching\ Manual-3.png");
-  background-size: cover;
+  background: linear-gradient(0deg,rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25)),url('./Coaching\ Manual-3.png');
+  background-size: 100% 100%;
   mask: url("Mask.png");
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
-  margin: 0px;
+  background-repeat: no-repeat;
+}
+
+form {
+	border-radius: 4px;
+	background-color: #FFFFFF;
+  margin: 0 auto;
+}
+
+.login-header {
+  background: #45D695;
+  height: 55px;
+  font-size: 14px;
+  color: white;
+  line-height: 55px;
+  text-align: center;
+  padding-right: 25px;
+}
+
+img[alt*="key"] {
+  float: left;
+  padding: 22px;
+  margin: 0 auto
+}
+
+.form-content {
+  padding: 20px;
+}
+
+input[type=password], input[type=email]{
+	width: 99%;
+	height: 40px;
+	border: 1px solid #D0D3D4;
+	border-radius: 5px;
+	color: rgb(133, 134, 134);
+	background-color: D5D5D5; 
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.subheadings {
+  float: left;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+
+.input {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.password {
+  padding-bottom: 25px;
+}
+
+.submit {
+	background-color: #45D695;
+	border-radius: 5px;
+	width: 100%;
+  height: 45px;
+  border: none;
+	font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+.forgot-pwd {
+  float: left;
+  font-size: 12px;
+  padding-top: 30px;
+  color: #45D695;
+  padding-bottom: 10px;
+}
+
+.sign-up {
+  float: right;
+  font-size: 12px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.clickon-signup {
+  color: #45D695;
+}
+
+.clickon-signup, .forgot-pwd:hover {
+  cursor: pointer
 }

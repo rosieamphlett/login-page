@@ -6,12 +6,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        
         <header className="App-header">
           <img src= {require('./pics/tcm-logo.png')} alt="logo"/>
         </header>
+        
         <div className="content">
           <Login />
         </div>
+      
       </div>
     );
   }

@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  overflow: hidden
+}
+
+.App {
+  text-align: center;
+  /* filter: drop-shadow(1411px, 826px, rgba(44, 82, 140, 0.5)); */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+
+.App-header {
+  border-top: 5px solid #45D695;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  background: #2F313C;
+  height: 65px;
+  margin: 0px;
+}
+
+img {
+  float: left;
+  padding: 10px;
+}
+
+.content {
+  background-image: url("./Coaching\ Manual-3.png");
+  background-size: cover;
+  mask: url("Mask.png");
+  height: 100vh;
+  margin: 0px;
+}

@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   overflow: hidden;
 }
@@ -9,7 +9,7 @@
   color: white;
   background: #2F313C;
   height: 65px;
-  margin: 0px;
+  margin: 0;
 }
 
 img[alt*="logo"] {
@@ -61,11 +61,12 @@ input[type=password], input[type=email]{
 	border: 1px solid #D0D3D4;
 	border-radius: 5px;
 	color: rgb(133, 134, 134);
-	background-color: D5D5D5; 
-	font-weight: 400;
+	background-color: #D5D5D5; 
+	/* font-weight: 400; 
 	font-size: 12px;
 }
 
+/*label 
 .subheadings {
   float: left;
   font-size: 12px;
@@ -122,4 +123,4 @@ input[type=password], input[type=email]{
 
 .clickon-signup, .forgot-pwd:hover {
   cursor: pointer
-}
+} */

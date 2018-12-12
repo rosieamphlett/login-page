@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
 import Login from './Login'
-import './App.css';
+import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        
         <header className="App-header">
-          <img src= {require('./pics/tcm-logo.png')} alt="logo"/>
+          <img src= {require('./pics/Vector.png')} alt="logo"/>
         </header>
-        
-        <div className="content">
-          <Login />
-        </div>
-      
+
+        <Login />
       </div>
     );
   }
